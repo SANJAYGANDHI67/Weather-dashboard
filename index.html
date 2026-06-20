@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+    <div class="container">
+
+        <div class="weather-card">
+
+            <h1>Weather Dashboard</h1>
+            <button id="themeToggle">🌙 Dark Mode</button>
+
+            <!-- Search Section -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name"
+                >
+                <div class="history-section">
+    <h3>Recent Searches</h3>
+    <ul id="searchHistory"></ul>
+</div>
+
+                <ul id="suggestions"></ul>
+                <button id="searchBtn">
+                    Search
+                </button>
+            </div>
+
+            <button id="locationBtn">
+    📍 My Location
+</button>
+
+            <!-- Loading -->
+            
+            <div id="loading" class="loading hidden">
+    <div class="spinner"></div>
+    <p>Loading weather...</p>
+</div>
+
+            <!-- Error Message -->
+            
+
+            <div id="error" class="error hidden">
+    ❌ City not found. Please enter a valid city.
+</div>
+
+            <!-- Weather Information -->
+            <div id="weatherInfo" class="weather-info hidden">
+
+                <h2 id="cityName"></h2>
+
+                <img
+                    id="weatherIcon"
+                    src=""
+                    alt="Weather Icon"
+                >
+                <div id="forecast" class="forecast hidden">
+</div>
+
+                <h3 id="temperature"></h3>
+
+                <p id="condition"></p>
+
+                <div class="details">
+
+                    <div class="detail-box">
+                        <span>Humidity</span>
+                        <strong id="humidity"></strong>
+                    </div>
+
+                    <div class="detail-box">
+                        <span>Wind Speed</span>
+                        <strong id="windSpeed"></strong>
+                    </div>
+                    <div class="detail-box">
+    <span>Date</span>
+    <strong id="currentDate"></strong>
+</div>
+
+<div class="detail-box">
+    <span>Time</span>
+    <strong id="currentTime"></strong>
+</div>
+
+<div class="detail-box">
+    <span>Sunrise</span>
+    <strong id="sunrise"></strong>
+</div>
+
+<div class="detail-box">
+    <span>Sunset</span>
+    <strong id="sunset"></strong>
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
